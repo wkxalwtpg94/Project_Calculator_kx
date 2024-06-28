@@ -38,3 +38,24 @@ function operate (operator, firstNumber, secondNumber) {
 
 }
 
+// Create functional display
+let display = document.querySelector(".display");
+let storedDisplay = display.textContent
+
+// Buttons to Populate Display
+let buttonsToDisplay = document.querySelectorAll(".digit_button, .operator_button")
+buttonsToDisplay.forEach((button) => {
+    button.addEventListener("click", () => {
+        if (display.textContent == "0") {
+            display.textContent = ""
+        }
+        display.textContent = display.textContent + button.value
+
+    });
+
+});
+
+
+
+
+// 

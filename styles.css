@@ -48,10 +48,20 @@ body {
     width: 92px;
     flex-shrink: 0;
     height: 50px;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     
 
+}
+
+.operator_button, .equals_button {
+    font-size: 26px;
+}
+
+
+.equals_button {
+    background-color: 	rgb(255,140,0);
+    color: white;
 }
