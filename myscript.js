@@ -75,4 +75,11 @@ equalsButton.addEventListener("click", () => {
     let answer  = operate(splitDisplay[1], splitDisplay[0], splitDisplay[2])
     console.log(answer)
     display.textContent = answer
-})
+});
+
+// Create function behind Clear Button
+let clearButton = document.querySelector(".clear_button")
+clearButton.addEventListener("click", () => {
+    display.textContent = ""
+
+});

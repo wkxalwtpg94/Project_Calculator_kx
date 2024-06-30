@@ -46,7 +46,7 @@ body {
 
 }
 
-.digit_button, .operator_button, .equals_button {
+.digit_button, .operator_button, .equals_button, .clear_button {
     width: 92px;
     flex-shrink: 0;
     height: 50px;
