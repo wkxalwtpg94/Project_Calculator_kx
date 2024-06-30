@@ -1,6 +1,4 @@
-* {
-    border: 1px solid red;
-}
+
 
 body, html {
     margin: 0;
@@ -11,6 +9,7 @@ body, html {
 body {
     display: flex;
     justify-content: center;
+
     
 }
 
@@ -20,6 +19,9 @@ body {
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    background-color: 	rgb(128,128,128);
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .display {
@@ -32,6 +34,7 @@ body {
     font-weight: 400;
     font-style: normal;
     min-height: 28px;
+    background-color: #d4edda;
     
 
 }
@@ -40,8 +43,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 7px;
     padding: 5px;
+    
     
 
 }
@@ -54,16 +58,22 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    border-radius: 10px;
     
 
 }
 
-.operator_button, .equals_button {
-    font-size: 26px;
+.operator_button {
+    font-size: 28px;
+    background-color: rgb(60,179,113);
+    color: white ;
+
 }
+
 
 
 .equals_button {
     background-color: 	rgb(255,140,0);
     color: white;
+    font-size: 33px;
 }
