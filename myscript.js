@@ -1,6 +1,6 @@
 // Create Basic Math Operators
 function add (a, b) {
-    return a + b
+    return Number(a) + Number(b)
 };
 
 function subtract (a, b) {
@@ -29,10 +29,10 @@ function operate (operator, firstNumber, secondNumber) {
     if (operator == "-") {
         return subtract(firstNumber, secondNumber)
     } 
-    if (operator == "*") {
+    if (operator == "x") {
         return multiply(firstNumber, secondNumber)
     } 
-    if (operator == "/") {
+    if (operator == "÷") {
         return divide(firstNumber, secondNumber)
     } 
 
@@ -40,7 +40,8 @@ function operate (operator, firstNumber, secondNumber) {
 
 // Create functional display
 let display = document.querySelector(".display");
-let storedDisplay = display.textContent
+let storedDisplay = display.textContent;
+let splitDisplay;
 
 // Buttons to Populate Display
 let buttonsToDisplay = document.querySelectorAll(".digit_button, .operator_button")
@@ -50,12 +51,28 @@ buttonsToDisplay.forEach((button) => {
             display.textContent = ""
         }
         display.textContent = display.textContent + button.value
+        storedDisplay = display.textContent
 
+
+
+    // Make the calculator work behind the scenes
+    // Store first and second value
+    let pattern = /([+\-x÷])/;
+    
+    splitDisplay = (storedDisplay.replace(/\s/g, "")).split(pattern);
+    console.log(splitDisplay)
     });
 
 });
 
+    
 
 
 
-// 
+// Create function behind equals button
+let equalsButton = document.querySelector(".equals_button");
+equalsButton.addEventListener("click", () => {
+    let answer  = operate(splitDisplay[1], splitDisplay[0], splitDisplay[2])
+    console.log(answer)
+    display.textContent = answer
+})
